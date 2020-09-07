@@ -38,7 +38,9 @@ def draw_player(x, y):
 
 
 def load_map(map):
-    m = open(map + ".txt", "r")
+    folder = os.path.abspath(os.path.dirname(__file__))
+    path = os.path.join(folder, map + ".txt")
+    m = open(path, "r")
     data = m.readlines()
     m.close()
     
